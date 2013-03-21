@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Create your mail with hackpad",
+  "description": "This extension lets you to create your e-mails directly with hackpad. Create hackpad and email text and link.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://mail.google.com/"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "css": ["hackpad.css"],
+      "js": ["jquery.js", "hackpad.js"]
+    }
+  ]
+}
